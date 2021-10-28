@@ -1,0 +1,14 @@
+D:\Users\Pepp2\Documents\repos\Service\bin\Debug\netstandard2.0\Service.deps.json
+D:\Users\Pepp2\Documents\repos\Service\bin\Debug\netstandard2.0\Service.dll
+D:\Users\Pepp2\Documents\repos\Service\bin\Debug\netstandard2.0\Service.pdb
+D:\Users\Pepp2\Documents\repos\Service\obj\Debug\netstandard2.0\Service.csprojAssemblyReference.cache
+D:\Users\Pepp2\Documents\repos\Service\obj\Debug\netstandard2.0\Service.AssemblyInfoInputs.cache
+D:\Users\Pepp2\Documents\repos\Service\obj\Debug\netstandard2.0\Service.AssemblyInfo.cs
+D:\Users\Pepp2\Documents\repos\Service\obj\Debug\netstandard2.0\Service.csproj.CoreCompileInputs.cache
+D:\Users\Pepp2\Documents\repos\Service\obj\Debug\netstandard2.0\Service.dll
+D:\Users\Pepp2\Documents\repos\Service\obj\Debug\netstandard2.0\Service.pdb
+D:\Users\Pepp2\Documents\repos\Service\bin\Debug\netstandard2.0\DAL.dll
+D:\Users\Pepp2\Documents\repos\Service\bin\Debug\netstandard2.0\Models.dll
+D:\Users\Pepp2\Documents\repos\Service\bin\Debug\netstandard2.0\DAL.pdb
+D:\Users\Pepp2\Documents\repos\Service\bin\Debug\netstandard2.0\Models.pdb
+D:\Users\Pepp2\Documents\repos\Service\obj\Debug\netstandard2.0\Service.csproj.CopyComplete
