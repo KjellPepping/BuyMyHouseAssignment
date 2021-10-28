@@ -10,3 +10,16 @@ D:\Users\Pepp2\Documents\repos\DAL\obj\Debug\netstandard2.0\DAL.pdb
 D:\Users\Pepp2\Documents\repos\DAL\bin\Debug\netstandard2.0\Models.dll
 D:\Users\Pepp2\Documents\repos\DAL\bin\Debug\netstandard2.0\Models.pdb
 D:\Users\Pepp2\Documents\repos\DAL\obj\Debug\netstandard2.0\DAL.csproj.CopyComplete
+C:\Users\Pepp2\source\repos\BuyMyHouseAssignment\DAL\bin\Debug\netstandard2.0\DAL.deps.json
+C:\Users\Pepp2\source\repos\BuyMyHouseAssignment\DAL\bin\Debug\netstandard2.0\DAL.dll
+C:\Users\Pepp2\source\repos\BuyMyHouseAssignment\DAL\bin\Debug\netstandard2.0\DAL.pdb
+C:\Users\Pepp2\source\repos\BuyMyHouseAssignment\DAL\bin\Debug\netstandard2.0\Models.dll
+C:\Users\Pepp2\source\repos\BuyMyHouseAssignment\DAL\bin\Debug\netstandard2.0\Models.pdb
+C:\Users\Pepp2\source\repos\BuyMyHouseAssignment\DAL\obj\Debug\netstandard2.0\DAL.csproj.AssemblyReference.cache
+C:\Users\Pepp2\source\repos\BuyMyHouseAssignment\DAL\obj\Debug\netstandard2.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Pepp2\source\repos\BuyMyHouseAssignment\DAL\obj\Debug\netstandard2.0\DAL.AssemblyInfoInputs.cache
+C:\Users\Pepp2\source\repos\BuyMyHouseAssignment\DAL\obj\Debug\netstandard2.0\DAL.AssemblyInfo.cs
+C:\Users\Pepp2\source\repos\BuyMyHouseAssignment\DAL\obj\Debug\netstandard2.0\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Pepp2\source\repos\BuyMyHouseAssignment\DAL\obj\Debug\netstandard2.0\DAL.csproj.CopyComplete
+C:\Users\Pepp2\source\repos\BuyMyHouseAssignment\DAL\obj\Debug\netstandard2.0\DAL.dll
+C:\Users\Pepp2\source\repos\BuyMyHouseAssignment\DAL\obj\Debug\netstandard2.0\DAL.pdb

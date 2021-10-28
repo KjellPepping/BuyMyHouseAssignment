@@ -6,7 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace BuyMyHouseAssignment
+namespace DAL
 {
     public class Config
     {

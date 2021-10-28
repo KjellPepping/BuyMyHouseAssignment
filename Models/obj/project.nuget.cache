@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "pRa4s8qaPV4YOQs7dXxiSLRe+CG1KsVj0A+gm00z2sY2+52dNrB7m7TQ2evbWqRMUuFWM5aBq5ClYDnI/9HfmQ==",
+  "dgSpecHash": "lIR7o914INEVIJjhw1I96i3Baw5+fIYFPI2hYw1RcJCbV8muRJXI9lnkYEQdw4Gg3mhfF3sJWY6ey9a5+rpTHg==",
   "success": true,
-  "projectFilePath": "D:\\Users\\Pepp2\\Documents\\repos\\BMH\\Models\\Models.csproj",
+  "projectFilePath": "C:\\Users\\Pepp2\\source\\repos\\BuyMyHouseAssignment\\Models\\Models.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Pepp2\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\Pepp2\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",

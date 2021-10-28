@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Reflection;
 using System.Text;
+using System.Threading.Tasks;
+using Microsoft.WindowsAzure.Storage.Table;
 using Models;
 
 namespace DAL
@@ -8,7 +11,7 @@ namespace DAL
 
     public interface IHouseRepository
     {
-        House POST_House(House house);
+        Task<House> POST_HouseAsync(House house);
         House GET_House(int houseId);
         IEnumerable<House> GET_AllHouses();
         House PUT_House(House updatedHouse, int houseId);
@@ -16,6 +19,7 @@ namespace DAL
     }
     public class HouseRepository : IHouseRepository
     {
+     
         public void DELETE_House(int houseId)
         {
             throw new NotImplementedException();
@@ -31,9 +35,23 @@ namespace DAL
             throw new NotImplementedException();
         }
 
-        public House POST_House(House house)
+        public async Task<House> POST_HouseAsync(House house)
         {
-            throw new NotImplementedException();
+            CloudTable houseTable = Config.GetCloudStorageAccount(new Microsoft.Azure.WebJobs.ExecutionContext(), "housetable");
+
+            var dynamicTableEntity = new DynamicTableEntity();
+            dynamicTableEntity.RowKey = "HouseRow";
+            dynamicTableEntity.PartitionKey = "HousePartition";
+
+            foreach (PropertyInfo prop in house.GetType().GetProperties())
+            {
+                dynamicTableEntity.Properties.Add(prop.Name, EntityProperty.CreateEntityPropertyFromObject(prop.GetValue(house)));
+            }
+
+            var tableOperation = TableOperation.Insert(dynamicTableEntity);
+            await houseTable.ExecuteAsync(tableOperation);
+
+            return house;
         }
 
         public House PUT_House(House updatedHouse, int houseId)

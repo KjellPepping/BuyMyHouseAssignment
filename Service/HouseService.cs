@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using Models;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Schema;
+using DAL;
+using Microsoft.Extensions.Logging;
 
 namespace Service
 {
     public interface IHouseService
     {
-        House VALIDATE_House(string houseBody);
+        bool VALIDATE_House(string houseBody);
         House POST_House(House house);
         IEnumerable<House> GET_AllHouses();
         House PUT_House(House updatedHouse, int houseId);
@@ -16,9 +18,16 @@ namespace Service
     }
     public class HouseService : IHouseService
     {
-        public House VALIDATE_House(string houseBody)
+        private readonly IHouseRepository HouseRepository;
+
+        public HouseService(ILogger<HouseService> Logger, IHouseRepository HouseRepository)
         {
-            throw new NotImplementedException();
+            this.HouseRepository = HouseRepository;
+        }
+
+        public bool VALIDATE_House(string houseBody)
+        {
+            return houseSerializer.validateHouse(houseBody);
         }
         public void DELETE_House(int houseId)
         {
@@ -32,7 +41,8 @@ namespace Service
 
         public House POST_House(House house)
         {
-            throw new NotImplementedException();
+            HouseRepository.POST_HouseAsync(house);
+            return house;
         }
 
         public House PUT_House(House updatedHouse, int houseId)

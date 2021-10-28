@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Models;
 using Service;
+using DAL;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Schema;
@@ -19,51 +20,37 @@ namespace BuyMyHouseAssignment
 {
     public class HouseController
     {
-        IHouseService HouseService { get; }
+        private readonly IHouseService HouseService;
 
-        public HouseController(IHouseService HouseService) {
+        public HouseController(IHouseService HouseService)
+        {
             this.HouseService = HouseService;
         }
-
+       
         [FunctionName("POST_House")]
-        public static async Task<IActionResult> POST_House([HttpTrigger(AuthorizationLevel.Function, "post", Route = "house")] HttpRequest req, ILogger log,ExecutionContext context)
+        public async Task<IActionResult> POST_House([HttpTrigger(AuthorizationLevel.Function, "post", Route = "house")] HttpRequest req, ILogger log,ExecutionContext context)
         {
             log.LogInformation("/house GET has been requested.");
 
             string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
 
-            House newHouse = await HouseService.VALIDATE_House(requestBody);
-/*
-            if(!houseSerializer.validateHouse(requestBody))
-                return new BadRequestObjectResult("Invalid house object");
+            
 
-            House addedHouse = JsonConvert.DeserializeObject<House>(requestBody);
-
-            CloudTable table = Config.GetCloudStorageAccount(context,"HouseTable");
-
-            var dynamicTableEntity = new DynamicTableEntity();
-            dynamicTableEntity.RowKey = "HouseRow";
-            dynamicTableEntity.PartitionKey = "HousePartition";
-
-            foreach(PropertyInfo prop in addedHouse.GetType().GetProperties())
+            if (HouseService.VALIDATE_House(requestBody))
             {
-                dynamicTableEntity.Properties.Add(prop.Name, EntityProperty.CreateEntityPropertyFromObject(prop.GetValue(addedHouse)));
+                House newHouse = JsonConvert.DeserializeObject<House>(requestBody);
+                HouseService.POST_House(newHouse);
             }
-
-            var tableOperation = TableOperation.Insert(dynamicTableEntity);
-            await table.ExecuteAsync(tableOperation);
-
-            string responseMessage = "Thanks for supplying a valid House model";*/
 
             return new OkObjectResult("POST House");
         }
 
         [FunctionName("GET_House")]
-        public static async Task<IActionResult> GET_House([HttpTrigger(AuthorizationLevel.Function, "get", Route = "house")] HttpRequest req, ILogger log)
+        public async Task<IActionResult> GET_House([HttpTrigger(AuthorizationLevel.Function, "get", Route = "house")] HttpRequest req, ILogger log)
         {
             log.LogInformation("/house GET has been requested.");
 
-            //Get all houses
+            //Get all Houses
 
             string responseMessage = "Thanks for supplying a valid House model";
 
@@ -71,7 +58,7 @@ namespace BuyMyHouseAssignment
         }
 
         [FunctionName("DELETE_House")]
-        public static async Task<IActionResult> DELETE_House([HttpTrigger(AuthorizationLevel.Function, "delete", Route = "house/{id:int}")] HttpRequest req, ILogger log, int id)
+        public async Task<IActionResult> DELETE_House([HttpTrigger(AuthorizationLevel.Function, "delete", Route = "house/{id:int}")] HttpRequest req, ILogger log, int id)
         {
             log.LogInformation("/house DELETE has been requested.");
 
@@ -83,7 +70,7 @@ namespace BuyMyHouseAssignment
         }
 
         [FunctionName("PUT_House")]
-        public static async Task<IActionResult> PUT_House([HttpTrigger(AuthorizationLevel.Function, "put", Route = "house/{id:int}")] HttpRequest req, ILogger log, int id)
+        public async Task<IActionResult> PUT_House([HttpTrigger(AuthorizationLevel.Function, "put", Route = "house/{id:int}")] HttpRequest req, ILogger log, int id)
         {
             log.LogInformation("/house DELETE has been requested.");
 
