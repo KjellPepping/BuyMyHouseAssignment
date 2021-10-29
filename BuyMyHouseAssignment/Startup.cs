@@ -1,21 +1,32 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
+﻿using Microsoft.Azure.Functions.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection;
 using Service;
 using DAL;
-using Microsoft.Azure.Functions.Extensions.DependencyInjection;
+
+[assembly: FunctionsStartup(typeof(Kennemerland.Startup.Program))]
 
 namespace Kennemerland.Startup
 {
-	public class Program : FunctionsStartup
-	{ 
+    public class Program : FunctionsStartup
+    {
         public override void Configure(IFunctionsHostBuilder builder)
         {
-			builder.Services.AddHttpContextAccessor();
-			builder.Services.AddSingleton<IHouseRepository, HouseRepository>();
-			builder.Services.AddSingleton<IUserRepository, UserRepository>();
-			builder.Services.AddSingleton<IHouseService, HouseService>();
-			builder.Services.AddSingleton<IUserService, UserService>();
-		}
+            builder.Services.Register();
+        }
+    }
+
+    public static class Injector
+    {
+        public static void Register(this IServiceCollection services)
+        {
+            services.AddTransient<IOfferService, OfferService>();
+            services.AddTransient<IOfferRepository, OfferRepository>();
+            services.AddTransient<IUserService, UserService>();
+            services.AddTransient<IUserRepository, UserRepository>();
+            services.AddTransient<IHouseService, HouseService>();
+            services.AddTransient<IHouseRepository, HouseRepository>();
+
+        }
     }
 }
 

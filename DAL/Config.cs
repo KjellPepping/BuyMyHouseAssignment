@@ -1,6 +1,7 @@
 ﻿using Microsoft.Azure.WebJobs;
 using Microsoft.Extensions.Configuration;
 using Microsoft.WindowsAzure.Storage;
+using Microsoft.WindowsAzure.Storage.Blob;
 using Microsoft.WindowsAzure.Storage.Table;
 using System;
 using System.Collections.Generic;
@@ -21,6 +22,20 @@ namespace DAL
             CloudTable table = tableClient.GetTableReference(tableName);
 
             return table;
+        }
+
+        public static CloudBlobContainer GetCloudBlobAccount(ExecutionContext executionContext, string blobName)
+        {
+            var config = new ConfigurationBuilder()
+                            .SetBasePath(executionContext.FunctionAppDirectory)
+                            .AddJsonFile("local.settings.json", true, true)
+                            .AddEnvironmentVariables().Build();
+            CloudStorageAccount storageAccount = CloudStorageAccount.Parse(config["AzureWebJobsStorage"]);
+            CloudBlobClient blobClient = storageAccount.CreateCloudBlobClient();
+            CloudBlobContainer cloudBlob = blobClient.GetContainerReference(blobName);
+
+            return cloudBlob;
+
         }
     }
 }

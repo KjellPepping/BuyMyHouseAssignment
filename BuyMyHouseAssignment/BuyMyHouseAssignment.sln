@@ -5,11 +5,11 @@ VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuyMyHouseAssignment", "BuyMyHouseAssignment.csproj", "{47EE514D-348A-4C44-A6B5-68C6DA7FDC97}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "..\Models\Models.csproj", "{DBBC5143-BE5E-49C9-8A67-8658CA8AD6A0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Models", "..\Models\Models.csproj", "{DBBC5143-BE5E-49C9-8A67-8658CA8AD6A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "..\DAL\DAL.csproj", "{0F773EB9-C27C-4FE1-9023-903E1B5B5939}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DAL", "..\DAL\DAL.csproj", "{0F773EB9-C27C-4FE1-9023-903E1B5B5939}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service", "..\Service\Service.csproj", "{6C5505D5-34A2-4BCF-8501-9CFAD9DA3335}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Service", "..\Service\Service.csproj", "{6C5505D5-34A2-4BCF-8501-9CFAD9DA3335}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

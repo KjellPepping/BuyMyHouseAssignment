@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Pepp2\\source\\repos\\BuyMyHouseAssignment\\Service\\Service.csproj": {}
+    "D:\\Users\\Pepp2\\Documents\\repos\\BMH\\Service\\Service.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Pepp2\\source\\repos\\BuyMyHouseAssignment\\DAL\\DAL.csproj": {
+    "D:\\Users\\Pepp2\\Documents\\repos\\BMH\\DAL\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Pepp2\\source\\repos\\BuyMyHouseAssignment\\DAL\\DAL.csproj",
+        "projectUniqueName": "D:\\Users\\Pepp2\\Documents\\repos\\BMH\\DAL\\DAL.csproj",
         "projectName": "DAL",
-        "projectPath": "C:\\Users\\Pepp2\\source\\repos\\BuyMyHouseAssignment\\DAL\\DAL.csproj",
+        "projectPath": "D:\\Users\\Pepp2\\Documents\\repos\\BMH\\DAL\\DAL.csproj",
         "packagesPath": "C:\\Users\\Pepp2\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Pepp2\\source\\repos\\BuyMyHouseAssignment\\DAL\\obj\\",
+        "outputPath": "D:\\Users\\Pepp2\\Documents\\repos\\BMH\\DAL\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
           "C:\\Users\\Pepp2\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -32,8 +28,8 @@
           "netstandard2.0": {
             "targetAlias": "netstandard2.0",
             "projectReferences": {
-              "C:\\Users\\Pepp2\\source\\repos\\BuyMyHouseAssignment\\Models\\Models.csproj": {
-                "projectPath": "C:\\Users\\Pepp2\\source\\repos\\BuyMyHouseAssignment\\Models\\Models.csproj"
+              "D:\\Users\\Pepp2\\Documents\\repos\\BMH\\Models\\Models.csproj": {
+                "projectPath": "D:\\Users\\Pepp2\\Documents\\repos\\BMH\\Models\\Models.csproj"
               }
             }
           }
@@ -51,10 +47,6 @@
             "Microsoft.Azure.WebJobs": {
               "target": "Package",
               "version": "[3.0.30, )"
-            },
-            "Microsoft.Extensions.Configuration": {
-              "target": "Package",
-              "version": "[5.0.0, )"
             },
             "NETStandard.Library": {
               "suppressParent": "All",
@@ -77,25 +69,21 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Pepp2\\source\\repos\\BuyMyHouseAssignment\\Models\\Models.csproj": {
+    "D:\\Users\\Pepp2\\Documents\\repos\\BMH\\Models\\Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Pepp2\\source\\repos\\BuyMyHouseAssignment\\Models\\Models.csproj",
+        "projectUniqueName": "D:\\Users\\Pepp2\\Documents\\repos\\BMH\\Models\\Models.csproj",
         "projectName": "Models",
-        "projectPath": "C:\\Users\\Pepp2\\source\\repos\\BuyMyHouseAssignment\\Models\\Models.csproj",
+        "projectPath": "D:\\Users\\Pepp2\\Documents\\repos\\BMH\\Models\\Models.csproj",
         "packagesPath": "C:\\Users\\Pepp2\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Pepp2\\source\\repos\\BuyMyHouseAssignment\\Models\\obj\\",
+        "outputPath": "D:\\Users\\Pepp2\\Documents\\repos\\BMH\\Models\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
           "C:\\Users\\Pepp2\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -121,6 +109,10 @@
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
           "dependencies": {
+            "Microsoft.Azure.WebJobs": {
+              "target": "Package",
+              "version": "[3.0.30, )"
+            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",
@@ -130,6 +122,10 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.1, )"
+            },
+            "WindowsAzure.Storage": {
+              "target": "Package",
+              "version": "[9.3.3, )"
             }
           },
           "imports": [
@@ -142,25 +138,21 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Pepp2\\source\\repos\\BuyMyHouseAssignment\\Service\\Service.csproj": {
+    "D:\\Users\\Pepp2\\Documents\\repos\\BMH\\Service\\Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Pepp2\\source\\repos\\BuyMyHouseAssignment\\Service\\Service.csproj",
+        "projectUniqueName": "D:\\Users\\Pepp2\\Documents\\repos\\BMH\\Service\\Service.csproj",
         "projectName": "Service",
-        "projectPath": "C:\\Users\\Pepp2\\source\\repos\\BuyMyHouseAssignment\\Service\\Service.csproj",
+        "projectPath": "D:\\Users\\Pepp2\\Documents\\repos\\BMH\\Service\\Service.csproj",
         "packagesPath": "C:\\Users\\Pepp2\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Pepp2\\source\\repos\\BuyMyHouseAssignment\\Service\\obj\\",
+        "outputPath": "D:\\Users\\Pepp2\\Documents\\repos\\BMH\\Service\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
           "C:\\Users\\Pepp2\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -174,11 +166,11 @@
           "netstandard2.0": {
             "targetAlias": "netstandard2.0",
             "projectReferences": {
-              "C:\\Users\\Pepp2\\source\\repos\\BuyMyHouseAssignment\\DAL\\DAL.csproj": {
-                "projectPath": "C:\\Users\\Pepp2\\source\\repos\\BuyMyHouseAssignment\\DAL\\DAL.csproj"
+              "D:\\Users\\Pepp2\\Documents\\repos\\BMH\\DAL\\DAL.csproj": {
+                "projectPath": "D:\\Users\\Pepp2\\Documents\\repos\\BMH\\DAL\\DAL.csproj"
               },
-              "C:\\Users\\Pepp2\\source\\repos\\BuyMyHouseAssignment\\Models\\Models.csproj": {
-                "projectPath": "C:\\Users\\Pepp2\\source\\repos\\BuyMyHouseAssignment\\Models\\Models.csproj"
+              "D:\\Users\\Pepp2\\Documents\\repos\\BMH\\Models\\Models.csproj": {
+                "projectPath": "D:\\Users\\Pepp2\\Documents\\repos\\BMH\\Models\\Models.csproj"
               }
             }
           }
@@ -193,6 +185,10 @@
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
           "dependencies": {
+            "Microsoft.Azure.WebJobs": {
+              "target": "Package",
+              "version": "[3.0.30, )"
+            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",
@@ -214,7 +210,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
         }
       }
     }

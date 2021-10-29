@@ -1,9 +1,10 @@
-﻿using Newtonsoft.Json;
+﻿using Microsoft.WindowsAzure.Storage.Table;
+using Newtonsoft.Json;
 using System;
 
 namespace Models
 {
-    public class House
+    public class House : TableEntity
     {
         public int id { get; set; }
 
@@ -16,5 +17,7 @@ namespace Models
         public int streetNumber { get; set; }
 
         public string postalCode { get; set; }
+
+        public string city { get; set; }
     }
 }

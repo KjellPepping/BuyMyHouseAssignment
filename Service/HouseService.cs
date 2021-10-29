@@ -4,23 +4,24 @@ using Models;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Schema;
 using DAL;
-using Microsoft.Extensions.Logging;
+using Microsoft.Azure.WebJobs;
+using System.Threading.Tasks;
 
 namespace Service
 {
     public interface IHouseService
     {
         bool VALIDATE_House(string houseBody);
-        House POST_House(House house);
-        IEnumerable<House> GET_AllHouses();
-        House PUT_House(House updatedHouse, int houseId);
-        void DELETE_House(int houseId);
+        House POST_House(House house, ExecutionContext context);
+        House GET_House_ID(int houseId, ExecutionContext context);
+        House PUT_House(House updatedHouse, int houseId, ExecutionContext context);
+        void DELETE_House(House deletedHouse, ExecutionContext context);
     }
     public class HouseService : IHouseService
     {
-        private readonly IHouseRepository HouseRepository;
+        private IHouseRepository HouseRepository { get; }
 
-        public HouseService(ILogger<HouseService> Logger, IHouseRepository HouseRepository)
+        public HouseService(IHouseRepository HouseRepository)
         {
             this.HouseRepository = HouseRepository;
         }
@@ -29,25 +30,29 @@ namespace Service
         {
             return houseSerializer.validateHouse(houseBody);
         }
-        public void DELETE_House(int houseId)
+
+        public void DELETE_House(House deletedHouse, ExecutionContext context)
         {
-            throw new NotImplementedException();
+            HouseRepository.DELETE_House(deletedHouse, context);
         }
 
-        public IEnumerable<House> GET_AllHouses()
+        public House POST_House(House house,ExecutionContext context)
         {
-            throw new NotImplementedException();
-        }
-
-        public House POST_House(House house)
-        {
-            HouseRepository.POST_HouseAsync(house);
+            HouseRepository.POST_House(house,context);
             return house;
         }
 
-        public House PUT_House(House updatedHouse, int houseId)
+        public House PUT_House(House updatedHouse, int houseId, ExecutionContext context)
         {
-            throw new NotImplementedException();
+            House returnedHouse = HouseRepository.PUT_House(updatedHouse, houseId, context);
+            return returnedHouse;
+        }
+
+        public House GET_House_ID(int houseId, ExecutionContext context)
+        {
+            Task<House> retrievedHouse = HouseRepository.GET_House(houseId, context);
+            House house = retrievedHouse.Result;
+            return house;
         }
     }
     public class houseSerializer
